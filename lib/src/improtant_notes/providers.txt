@@ -1,0 +1,28 @@
+Provider Package in Flutter
+Provider Package: Provider is a popular state management solution for Flutter applications. It simplifies the process of managing and sharing application state.
+
+Create a Provider:
+
+Define a class that extends ChangeNotifier to create a provider. In your example, ListProvider is a custom provider class.
+State Management:
+
+Store the application state within the provider class. In your ListProvider, you store a list of numbers.
+Notify Listeners:
+
+Use notifyListeners() method within the provider class to notify listeners (typically widgets) when the state changes. This triggers widget updates.
+Wrap Widgets with Consumer:
+
+Use the Consumer widget to listen to changes in the provider's state and automatically rebuild widgets when changes occur.
+Access Provider Data:
+
+To access data or methods from the provider, use the Consumer widget's builder function. This provides access to the provider instance.
+Update Provider State:
+
+To update the state within the provider, call methods provided by the provider class. In your example, you call ListProviderModel.add().
+Navigating Between Screens:
+
+You can pass the same provider instance between different screens/widgets to share the same state.
+Providers in Widgets:
+
+You often define providers in a widget's ancestor and access them in child widgets using Consumer or Provider.of.
+Remember, the provider package is a flexible and efficient way to manage state in your Flutter applications, allowing you to separate state management from the UI and easily update widgets when the state changes.
